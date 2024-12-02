@@ -12,13 +12,14 @@ header{
     
     width: 30%;
     justify-content: space-around;
-
+    align-items: center;
     img{
         width: 20%;
     }
     h1{
         font-size: 30px;
         color: #ffff;
+        
     }
 }
 
@@ -63,5 +64,27 @@ header{
         background-color: transparent;
         border: none;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 788px){
+
+    header{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .logoHeader{
+        width: 90%;
+
+        img{
+            width: 15%;
+        }
+    }
+    .navHeader{
+
+        width: 95%;
+    }
+    .barraPesquisa{
+        display: none;
     }
 }
