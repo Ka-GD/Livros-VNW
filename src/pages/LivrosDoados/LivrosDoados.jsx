@@ -8,7 +8,7 @@ export default function LivrosDoados(){
            {/*inicio da sessao dos livros */}
            <section className={s.livrosCards}>
             <section>
-                <img src={protagonista} alt="" />
+                <img src={protagonista} alt="imagem de livro o protagonista com capa vermelha e letras brancas" />
                 <div>
                     <h3>O protagonista</h3>
                     <p>Susane Andrade</p>
@@ -24,4 +24,3 @@ export default function LivrosDoados(){
         
     )
 }
-

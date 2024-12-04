@@ -11,7 +11,7 @@
     }
 }
 .livrosCards{
-    
+    display: flex;
     width: 95%;
     height: 60vh;
 
@@ -29,4 +29,28 @@ section {
         text-align: center;
     }
 }
+}
+
+@media (max-width: 780px){
+
+    .livrosCards{
+
+        flex-direction: column;
+        align-items: center;
+        
+       
+
+        section{
+
+            width: 60%;
+            margin-bottom: 19px;
+          
+        }
+    }
+
+    .livrosDoados{
+
+        height: 75vh;
+        
+    }
 }
