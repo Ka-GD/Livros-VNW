@@ -14,6 +14,7 @@
     display: flex;
     width: 95%;
     height: 60vh;
+    gap: 20px; 
 
 section {
     border: solid 3px #005695; 
@@ -30,6 +31,8 @@ section {
     }
 }
 }
+
+
 
 @media (max-width: 780px){
 

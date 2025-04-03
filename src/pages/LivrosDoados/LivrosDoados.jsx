@@ -13,30 +13,30 @@ export default function LivrosDoados(){
 
     const puxarLivros = async()=> {
         const resposta = await axios.get("https://api-hgmm.onrender.com/livroscadastrados")
-        setlivros(resposta.data.livros)
-        console.log(livros)
+        setlivros(resposta.data)
+        
     }
+    console.log(livros)
+
     useEffect(()=>{
         puxarLivros()
     },[])
     
     return(
-        <section className={s.livrosDoados}>
+        < section className = {s.livrosDoados}>
            <h2>Livros Doados</h2>
-           {/*inicio da sessao dos livros */}
+           
            <section className={s.livrosCards}>
-            <section>
-                <img src={protagonista} alt="imagem de livro o protagonista com capa vermelha e letras brancas" />
-                <div>
-                    <h3>O protagonista</h3>
-                    <p>Susane Andrade</p>
-                    <p>Ficção</p>  
-                </div>
-        
-            </section>
+           {livros.map((item) => (
+                    <section>
+                        <img src={item.image_url} alt={`Imagem do livro ${item.titulo}`} />
+                        <div>
+                            <h3>{item.titulo}</h3>
+                        </div>
+                    </section>
+                ))}
            </section>
-           {/*fim da sessão dos livros */}
-            
+           
            
         </section>
         
